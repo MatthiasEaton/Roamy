@@ -33,16 +33,23 @@ body {
 
 .slogan {
     height: auto;
-    max-height: 22px;  /* adjust for desktop */
+    max-height: 22px;
     width: auto;
     object-fit: contain;
 }
 
 
-.logo-container,
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .slogan-container {
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 0.5rem 0 1rem;
 }
 
 .main-heading {
