@@ -35,9 +35,9 @@ body {
 
 /* Right slogan */
 .slogan {
-  width: 100%;        
-  max-width: 449px;     
-  height: auto;
+  width: auto;        
+  max-width: 100%;     
+  height: 30px;
   object-fit: contain;
 }
 
