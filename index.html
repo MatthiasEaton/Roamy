@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roamy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&family=Fredoka+One&family=Baloo+2&display=swap"
+        rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="sticky-header">
+            <div class="logo-container">
+                <img src="images/raomy-logo-solo.png" alt="Roamy logo" class="logo" />
+            </div>
+            <div class="slogan-container">
+                <img src="images/raomy-slogan.png" alt="Discover, Remember, Roam" class="slogan" />
+            </div>
+        </header>
+          
+
+            <h2 class="intro-text">Where have you been or want to go?</h2>
+
+        <main>
+            <section class="location-input">
+                <label for="location">Enter a Country:</label>
+                <input list="location-suggestions" id="location" placeholder="e.g., France" />
+                <datalist id="location-suggestions"></datalist>
+
+                <div class="buttons">
+                    <button id="been-button">I've been here</button>
+                    <button id="want-button">I want to go here</button>
+                </div>
+            </section>
+
+            <section class="map-area">
+                <div id="map" style="height: 400px;"></div>
+            </section>
+
+            <section class="entries-container">
+                <div class="entry-column">
+                    <h3>Places I've Been:</h3>
+                    <ul id="entries-list-been">
+                        <li id="placeholder-been" class="placeholder-text">No countries yet — add one above!</li>
+                    </ul>
+                    <div id="show-more-been" class="show-more-container"></div>
+                </div>
+                
+                <div class="entry-column">
+                    <h3>Places I Want to Go:</h3>
+                    <ul id="entries-list-want">
+                        <li id="placeholder-want" class="placeholder-text">No dream destinations yet — add one above!</li>
+                    </ul>
+                    <div id="show-more-want" class="show-more-container"></div>
+                </div>
+
+                <div id="country-tracker"></div>
+  
+                <section class="badges-section">
+                    <h3>My Badges</h3>
+                    <div id="badges-container"><div id="badges-placeholder" class="placeholder-text">
+                        Add countries that you've visited to earn badges!                
+                    </div>
+                    </div>        
+                </section>             
+              
+        </main>
+    </div>
+
+    <footer>
+        <p>Roamy © 2025</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
