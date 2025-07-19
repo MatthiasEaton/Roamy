@@ -35,11 +35,8 @@ body {
 
 /* Right slogan */
 .slogan {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    height: 10px;
+    object-fit: contain;
 }
 
 .logo-container,
