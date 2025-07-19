@@ -54,4 +54,11 @@ This project is licensed under the MIT License.
 
 ---
 
+## Contact
+
+Created by Matthias Eaton
+Feel free to open issues, submit pull requests, or reach out with questions!
+
+---
+
 Thank you for checking out Roamy! Enjoy tracking your adventures.
