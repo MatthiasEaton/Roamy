@@ -35,9 +35,9 @@ body {
 
 /* Right slogan */
 .slogan {
-  max-width: 250px; 
-  height: auto;      
   width: 100%;        
+  max-width: 449px;     
+  height: auto;
   object-fit: contain;
 }
 
@@ -183,9 +183,9 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .slogan {
-    max-width: 160px;
+    max-width: 280px;
     height: auto;
   }
 }
