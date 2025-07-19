@@ -16,9 +16,8 @@ body {
     position: sticky;
     top: 0;
     background-color: #FFFBF4;
-    /* or match your theme */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0.6rem 1.2rem;
     border-bottom: 1px solid #ccc;
@@ -27,19 +26,16 @@ body {
     border-radius: 8px;
 }
 
-/* Left logo */
 .logo {
     height: 40px;
     object-fit: contain;
 }
 
-/* Right slogan */
 .slogan {
-    max-height: 24px;
     height: auto;
+    max-height: 22px;  /* adjust for desktop */
     width: auto;
     object-fit: contain;
-    display: block;
 }
 
 
