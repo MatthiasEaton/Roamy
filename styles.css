@@ -35,18 +35,12 @@ body {
 
 /* Right slogan */
 .slogan {
-    height: 10px;
     width: 100%;
     max-width: 320px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-
-@media (max-width: 400px) {
-  .slogan-image {
-    max-width: 240px;
-  }
 
 .logo-container,
 .slogan-container {
