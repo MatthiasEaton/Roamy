@@ -35,12 +35,12 @@ body {
 
 /* Right slogan */
 .slogan {
-    max-height: 20px;
-    height: auto;
-    width: auto;
-    max-width: 150px;
-    object-fit: contain;
+  max-width: 250px; 
+  height: auto;      
+  width: 100%;        
+  object-fit: contain;
 }
+
 
 .logo-container,
 .slogan-container {
@@ -183,11 +183,11 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .slogan {
-        max-width: 100px;
-        max-height: 16px;
-    }
+@media (max-width: 600px) {
+  .slogan {
+    max-width: 160px;
+    height: auto;
+  }
 }
 
     .location-input label {
