@@ -35,7 +35,7 @@ body {
 
 /* Right slogan */
 .slogan {
-    max-height: 30px;
+    max-height: 24px;
     height: auto;
     width: auto;
     object-fit: contain;
@@ -186,7 +186,7 @@ footer {
 
 @media (max-width: 480px) {
   .slogan {
-    height: 24px;
+    height: 18px;
   }
 }
 
