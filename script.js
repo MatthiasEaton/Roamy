@@ -112,6 +112,9 @@ function loadEntries() {
   }  
 
   function createEntryElement(entry, index, entries, updateCallback, entryType) {
+    if (!entry.id) {
+  entry.id = crypto.randomUUID ? crypto.randomUUID() : Date.now() + Math.random();
+}
     const li = document.createElement("li");
   
     // Style based on entry type
@@ -156,17 +159,20 @@ function loadEntries() {
   
     // Button actions
     delBtn.onclick = () => {
-      if (confirm("Are you sure you want to delete this entry?")) {
-        entries.splice(entries.length - 1 - index, 1);
-        saveEntries(entries);
-        clearMapHighlights();
-        entries.forEach(e => {
-          const f = findCountryFeature(e.country);
-          if (f) highlightCountry(f, e.type);
-        });
-        updateCallback(entries);
-      }
-    };
+  if (confirm("Are you sure you want to delete this entry?")) {
+    const updatedEntries = entries.filter(e => e.id !== entry.id);
+
+    saveEntries(updatedEntries);
+    clearMapHighlights();
+
+    updatedEntries.forEach(e => {
+      const f = findCountryFeature(e.country);
+      if (f) highlightCountry(f, e.type);
+    });
+
+    updateCallback(updatedEntries);
+  }
+};
   
     // Inputs container
     //
