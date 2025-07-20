@@ -757,7 +757,7 @@ const formattedDate = today.toISOString().split("T")[0]; // This gives "2025-07-
       entry = {
         country: officialName,
         type,
-        date: formattedDate,
+        date: "",
         favoriteCities: "",
         story: "",
         images: []
