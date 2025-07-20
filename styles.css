@@ -212,21 +212,22 @@ footer {
 }
 
 .entries-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    /* so it still looks good on smaller screens */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .entry-column {
-    flex: 1 1 48%;
+    flex: 1;
     background-color: #f8f8f8;
-    padding: 10px 15px;
+    min-width: 300px;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
 }
 
 .entry-column h3 {
@@ -238,7 +239,7 @@ footer {
     padding-left: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .entries-container {
         flex-direction: column;
     }
