@@ -32,10 +32,11 @@ body {
 }
 
 .slogan {
-    height: auto;
-    max-height: 22px;
-    width: auto;
-    object-fit: contain;
+  height: auto;
+  max-height: 18px;    
+  max-width: 90vw;
+  object-fit: contain;
+  display: block;
 }
 
 
@@ -46,10 +47,9 @@ body {
 }
 
 .slogan-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0 1rem; /* top 0.5rem, bottom 1rem */
 }
 
 .main-heading {
@@ -180,11 +180,11 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-@media (min-width: 600px) {
-    .location-input {
-        flex-direction: row;
-        align-items: center;
-    }
+@media (max-width: 480px) {
+  .slogan {
+    max-height: 12px;     
+    max-width: 85vw;
+  }
 }
 
 @media (max-width: 480px) {
