@@ -215,10 +215,11 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 2rem;
   margin-top: 2rem;
   width: 100%;
+    max-width: 1000px
 }
 
 .entry-column {
