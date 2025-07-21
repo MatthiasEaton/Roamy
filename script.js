@@ -8,10 +8,6 @@ let highlightedLayers = [];
 let entries = JSON.parse(localStorage.getItem('entries')) || [];
 let badges = JSON.parse(localStorage.getItem('badges')) || [];
 
-console.log('entries:', JSON.parse(localStorage.getItem('entries')));
-console.log('badges:', JSON.parse(localStorage.getItem('badges')));
-
-
 
 fetch("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
   .then((res) => res.json())
@@ -49,18 +45,9 @@ function findCountryFeature(countryName) {
     "scotland": "united kingdom",
     "wales": "united kingdom",
     "northern ireland": "united kingdom",
-    "south korea": "korea, republic of",
-    "north korea": "korea, democratic people's republic of",
     "usa": "united states of america",
     "u.s.a.": "united states of america",
-    "united states": "united states of america",
-    "russia": "russian federation",
-    "iran": "iran, islamic republic of",
-    "vietnam": "viet nam",
-    "laos": "lao people's democratic republic",
-    "bolivia": "bolivia, plurinational state of",
-    "venezuela": "venezuela, bolivarian republic of",
-    "brunei": "brunei darussalam"
+    "united states": "united states of america"
   };
 
   const aliasMatch = aliases[normalized];
