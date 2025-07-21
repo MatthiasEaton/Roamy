@@ -40,16 +40,41 @@ function normalizeCountryName(name) {
 
 function findCountryFeature(countryName) {
   if (!countryGeoJSON || !countryGeoJSON.features) return null;
+
   const normalized = normalizeCountryName(countryName);
 
+  // Manual alias mapping
+  const aliases = {
+    "england": "united kingdom",
+    "scotland": "united kingdom",
+    "wales": "united kingdom",
+    "northern ireland": "united kingdom",
+    "south korea": "korea, republic of",
+    "north korea": "korea, democratic people's republic of",
+    "usa": "united states of america",
+    "u.s.a.": "united states of america",
+    "united states": "united states of america",
+    "russia": "russian federation",
+    "iran": "iran, islamic republic of",
+    "vietnam": "viet nam",
+    "laos": "lao people's democratic republic",
+    "bolivia": "bolivia, plurinational state of",
+    "venezuela": "venezuela, bolivarian republic of",
+    "brunei": "brunei darussalam"
+  };
+
+  const aliasMatch = aliases[normalized];
+  const targetName = aliasMatch || normalized;
+
+  // Exact match
   let match = countryGeoJSON.features.find(f =>
-    (f.properties.ADMIN || f.properties.name || "").toLowerCase() === normalized
+    (f.properties.ADMIN || f.properties.name || "").toLowerCase() === targetName
   );
   if (match) return match;
 
-  // Try partial match
+  // Partial match fallback
   return countryGeoJSON.features.find(f =>
-    (f.properties.ADMIN || f.properties.name || "").toLowerCase().includes(normalized)
+    (f.properties.ADMIN || f.properties.name || "").toLowerCase().includes(targetName)
   );
 }
 
